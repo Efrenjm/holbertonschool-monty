@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "lists.h"
+#include "monty.h"
 
 /**
   * sum_dlistint - Sum of all data(n) in a doubly linked list

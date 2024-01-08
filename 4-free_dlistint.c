@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "monty.h"
 #include <stdlib.h>
 /**
   * free_dlistint - function that frees a dlistint_t list.
