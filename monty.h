@@ -35,7 +35,6 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -47,11 +46,10 @@ typedef struct instruction_s
  */
 typedef struct dlistint_s
 {
-        int n;
-        struct dlistint_s *prev;
-        struct dlistint_s *next;
+	int n;
+	struct dlistint_s *prev;
+	struct dlistint_s *next;
 } dlistint_t;
-
 
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
@@ -64,7 +62,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
-
-
 
 #endif
