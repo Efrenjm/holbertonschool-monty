@@ -104,6 +104,8 @@ int exec_push(char *str, stack_t **head, int linum)
  */
 int exec_comm(char *str, stack_t **head, int linum)
 {
+	int i = 0;
+
 	for (i = 0; i <= 5; i++)
 	{
 		if (strncmp(get_op(i).opcode, str, 3) == 0)
