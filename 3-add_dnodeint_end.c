@@ -1,35 +1,32 @@
 #include "monty.h"
-#include <stdlib.h>
-
 /**
-  * add_dnodeint_end - adds a new node at the end of a dlistint_t
-  * @head: beginning of dlistint_t
-  * @n: Value to insert into node
-  * Return: address of the new element or NULL if it failed
-*/
-
+ * add_dnodeint_end - adds a new node at the end of a list_t list
+ * @head: beginning of list
+ * @n: int to be added to head
+ * Return: the address of the new element, or NULL if it failed
+ */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *new;
-	dlistint_t *hold = *head;
+	dlistint_t *end = *head;
+	dlistint_t *new = NULL;
 
 	new = malloc(sizeof(dlistint_t));
 	if (!new)
+	{
 		return (NULL);
-
-	while (hold && hold->next)
-		hold = hold->next;
-
+	}
 	new->n = n;
 	new->next = NULL;
-	new->prev = hold;
-
-	if (!*head)
+	if (*head == NULL)
+	{
+		new->prev = NULL;
 		*head = new;
-
-	if (hold)
-		hold->next = new;
+		return (new);
+	}
+	while (end->next != NULL)
+		end = end->next;
+	end->next = new;
+	new->prev = end;
 
 	return (new);
 }
-
