@@ -57,8 +57,8 @@ instruction_t get_op(int index)
 		ops[10].f = f1;
 		ops[11].f = f1;
 		ops[12].f = f1;
-		ops[13].f = f1;
-		ops[14].f = f1;
+		ops[13].f = stack;
+		ops[14].f = queue;
 	}
 	return (ops[index]);
 }
