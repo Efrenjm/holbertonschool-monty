@@ -49,7 +49,7 @@ instruction_t get_op(int index)
 		ops[2].f = f1;
 		ops[3].f = f1;
 		ops[4].f = f1;
-		ops[5].f = f1;
+		ops[5].f = pop;
 		ops[6].f = pall;
 		ops[7].f = pint;
 		ops[8].f = f1;

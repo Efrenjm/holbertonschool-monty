@@ -44,6 +44,7 @@ FILE *initialize_fd(int argc, char *filename);
 
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
 size_t print_dlistint(const dlistint_t *h);
 
 size_t dlistint_len(const dlistint_t *h);
