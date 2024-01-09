@@ -127,7 +127,7 @@ void exec_comm(char *s, stack_t **head, int linum)
 			return;
 		}
 	}
-	if ((strncmp(s, "nop", 3) == 0) || (s[0] == '#'))
+	if (s[0] == '#')
 		return;
 	if ((strncmp(s, "push", 4) == 0) || (s[0] == '\n') || (!(s[0])))
 		return;
