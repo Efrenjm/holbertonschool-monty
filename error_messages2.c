@@ -51,3 +51,24 @@ void add_error(unsigned int linum)
 	sprintf(s, "L%u: can't add, stack too short\n", linum);
 	error_mess(s);
 }
+
+/**
+ * pchar_error - error message
+ * @linum: the line number
+ * @mode: error 1 or error 2
+ */
+void pchar_error(unsigned int linum, int mode)
+{
+	char s[1024];
+
+	if (mode)
+	{
+		sprintf(s, "L%u: can't pchar, value out of range\n", linum);
+		error_mess(s);
+	}
+	else
+	{
+		sprintf(s, "L%u: can't pchar, stack empty\n", linum);
+		error_mess(s);
+	}
+}

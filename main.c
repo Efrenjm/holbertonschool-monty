@@ -53,10 +53,10 @@ instruction_t get_op(int index)
 		ops[6].f = pall;
 		ops[7].f = pint;
 		ops[8].f = f1;
-		ops[9].f = f1;
-		ops[10].f = f1;
-		ops[11].f = f1;
-		ops[12].f = f1;
+		ops[9].f = pstr;
+		ops[10].f = rotl;
+		ops[11].f = rotr;
+		ops[12].f = pchar;
 		ops[13].f = stack;
 		ops[14].f = queue;
 	}

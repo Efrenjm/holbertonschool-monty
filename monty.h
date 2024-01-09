@@ -37,19 +37,7 @@ typedef struct instruction_s
 
 typedef stack_t dlistint_t;
 
-int get_push_int(char *str);
-int last_status(int status);
-void error_mess(char *mess);
-int staq(int s, int q);
-FILE *initialize_fd(int argc, char *filename);
-
-void pall(stack_t **stack, unsigned int line_number);
-void pint(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
-void queue(stack_t **head, unsigned int linum);
-void stack(stack_t **head, unsigned int linum);
 size_t print_dlistint(const dlistint_t *h);
-
 size_t dlistint_len(const dlistint_t *h);
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
@@ -58,6 +46,12 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+
+int get_push_int(char *str);
+int last_status(int status);
+void error_mess(char *mess);
+int staq(int s, int q);
+FILE *initialize_fd(int argc, char *filename);
 
 void argv_error(void);
 void file_error(char *file);
@@ -68,5 +62,16 @@ void pint_error(unsigned int linum);
 void pop_error(unsigned int linum);
 void swap_error(unsigned int linum);
 void add_error(unsigned int linum);
+void pchar_error(unsigned int linum, int mode);
+
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+void stack(stack_t **stack, unsigned int line_number);
+void queue(stack_t **stack, unsigned int line_number);
 
 #endif
