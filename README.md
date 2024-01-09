@@ -28,3 +28,6 @@ files in the folder:
 - 6-sum_dlistint.c - function that returns the sum of all the data (n) of a dlistint_t linked
 - 7-insert_dnodeint.c - function that inserts a new node at a given position.
 - 8-delete_dnodeint.c - function that deletes the node at index index of a dlistint_t linked list  
+
+## Authors
+Jose Daniel Puc Poot and Efren Jimenez
