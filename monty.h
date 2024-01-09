@@ -37,6 +37,7 @@ typedef struct instruction_s
 
 typedef stack_t dlistint_t;
 
+int get_push_int(char *str);
 int last_status(int status);
 void error_mess(char *mess);
 int staq(int s, int q);
