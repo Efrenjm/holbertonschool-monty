@@ -37,9 +37,15 @@ typedef struct instruction_s
 
 typedef stack_t dlistint_t;
 
+int last_status(int status);
+void error_mess(char *mess);
+int staq(int s, int q);
+FILE *initialize_fd(int argc, char *filename);
+
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 size_t print_dlistint(const dlistint_t *h);
+
 size_t dlistint_len(const dlistint_t *h);
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
