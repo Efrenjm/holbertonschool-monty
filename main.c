@@ -68,7 +68,6 @@ instruction_t get_op(int index)
  * @str: the line at the checkpoint
  * @head: the head of the stack
  * @linum: the current monty line number
- * Return: 0 if success, -1 if atoi fails (not pushing a number)
  */
 void exec_push(char *str, stack_t **head, int linum)
 {
@@ -98,7 +97,6 @@ void exec_push(char *str, stack_t **head, int linum)
  * @s: the string at a checkpoint
  * @head: the head of the stack
  * @linum: the monty line number
- * Return: 1 if success, 0 if nop or comment, -1 if error
  */
 void exec_comm(char *s, stack_t **head, int linum)
 {
@@ -156,10 +154,10 @@ int main(int argc, char **argv)
 
 	fd = initialize_fd(argc, argv[1]);
 	staq(1, 0);
-
 	while (((red = getline(&line, &length, fd)) != -1) && stat != -1)
 	{
 		i = 0;
+
 		while (line[i] == ' ' || line[i] == '	')
 			i++;
 		exec_push(line + i, &stack, linum);
