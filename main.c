@@ -25,7 +25,6 @@ instruction_t get_op(int index)
 
 	if ((ops[0]).opcode == NULL)
 	{
-		/*fill all values*/
 		ops[0].opcode = "add";
 		ops[1].opcode = "sub";
 		ops[2].opcode = "div";
@@ -44,7 +43,7 @@ instruction_t get_op(int index)
 		ops[13].opcode = "stack";
 		ops[14].opcode = "queue";
 
-		ops[0].f = f1;
+		ops[0].f = add;
 		ops[1].f = f1;
 		ops[2].f = f1;
 		ops[3].f = f1;
@@ -52,7 +51,7 @@ instruction_t get_op(int index)
 		ops[5].f = pop;
 		ops[6].f = pall;
 		ops[7].f = pint;
-		ops[8].f = f1;
+		ops[8].f = swap;
 		ops[9].f = pstr;
 		ops[10].f = rotl;
 		ops[11].f = rotr;
