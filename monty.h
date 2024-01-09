@@ -62,5 +62,9 @@ void file_error(char *file);
 void inst_error(char *inst, unsigned int linum);
 void malloc_error(void);
 void push_error(unsigned int linum);
+void pint_error(unsigned int linum);
+void pop_error(unsigned int linum);
+void swap_error(unsigned int linum);
+void add_error(unsigned int linum);
 
 #endif
